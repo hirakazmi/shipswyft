@@ -1,0 +1,823 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- metas -->
+    <meta charset="utf-8">
+    <meta name="author" content="99pixel" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="Mombo - Creative Multi-Purpose Template" />
+    <meta name="description" content="Mombo - Creative Multi-Purpose Template" />
+    <!-- title -->
+    <title>ShipSwyfy</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <!-- plugin CSS -->
+    <link href="static/plugin/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/plugin/font-awesome/css/all.min.css" rel="stylesheet">
+    <link href="static/plugin/et-line/style.css" rel="stylesheet">
+    <link href="static/plugin/themify-icons/themify-icons.css" rel="stylesheet">
+    <link href="static/plugin/owl-carousel/css/owl.carousel.min.css" rel="stylesheet">
+    <link href="static/plugin/magnific/magnific-popup.css" rel="stylesheet">
+    <!-- theme css -->
+    <link href="static/style/master.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/plugin/owl-carousel/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="static/plugin/owl-carousel/css/owl.theme.default.min.css">
+</head>
+<!-- Body Start -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js" type="text/javascript" ></script>
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js"></script>
+ 
+    <script type="text/javascript">
+        $(document).ready( function(){
+            $.fn.parallax = function(resistance, mouse) {
+              $el = $(this);
+              TweenLite.to($el, 0.2, {
+                x: -((mouse.clientX - window.innerWidth / 2) / resistance),
+                y: -((mouse.clientY - window.innerHeight / 2) / resistance)
+              });
+            };
+
+            $(document).mousemove(function(e) {
+              $(".background").parallax(-30, e);
+              $(".map").parallax(190, e);
+              });
+           
+          });
+         
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+          $('.owl-carousel').owlCarousel({
+                stagePadding: 50,
+                loop:true,
+                margin:50,
+                autoplay:true,
+                autoWidth:true,
+                responsive:{
+                    0:{
+                        items:1,
+                        stagePadding: 0,
+                    },
+                    800:{
+                        items:3,
+                        stagePadding: 50,
+                    },
+                }
+            })
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('[fade-up-in]').each(function(index, el) {
+                    // Init ScrollMagic Controller
+                    var scrollMagicController = new ScrollMagic.Controller();
+                    
+                    var tl = new TimelineMax({pause: true});    
+                    tl.add("start") // add timeline label
+                        .fromTo(el, 2, { autoAlpha: 0, y: 160 }, { autoAlpha: 1, y: 0, ease: Power2.easeOut }, "start")
+
+                    // Create the Scene and trigger when visible
+                    var scene = new ScrollMagic.Scene({
+                        triggerElement: el,
+                        triggerHook: 'onEnter',
+                        offset: 170
+                    })
+                    .setTween(tl)
+                    .addTo(scrollMagicController);
+                });
+
+            
+        });
+    </script>
+
+<body data-spy="scroll" data-target="#navbar-collapse-toggle" data-offset="98">
+    <!-- Preload -->
+    <div id="loading">
+        <div class="load-circle"><span class="one"></span></div>
+    </div>
+    <!-- End Preload -->
+    <!-- Header -->
+
+    <header class="header-nav header-white">
+        <div class="fixed-header-bar">
+            <a style="cursor: pointer;" href="covid.html"><div class="bannertop" style="">Covid Text something something click here for something</div></a>                
+            <div class="container container-large">
+                <div class="navbar navbar-default navbar-expand-lg main-navbar">
+                    <div class="navbar-brand" style="padding: 0;">
+                        <a href="index.html" title="Mombo" class="logo">
+                           <div>                               
+                               <object width="150"  data="static/img/logo.svg">
+                                <img src="static/img/logo.svg" class="light-logo" alt="Mombo" title="">
+                                </object>
+                           </div> 
+                            
+                        </a>
+                    </div>
+                    <div class="navbar-collapse justify-content-end collapse" id="navbar-collapse-toggle">
+                        <ul class="nav navbar-nav m-auto">
+                             <li><a class="nav-link nav-mb" href="">Login</a></li>
+                              <li><a class="nav-link nav-mb" href="">Get Demo</a></li>
+                            <li class="mm-in px-dropdown">
+                                <a href="#home">Solutions</a>
+                                <i class="fa fa-angle-down px-nav-toggle"></i>
+                                <ul class="px-dropdown-menu mm-dorp-in">
+                                    <li><a href="index-01.html">Home Option 2</a></li>
+                                    <li><a href="index-02.html">Home Option 3</a></li>
+                                    <li><a href="index-03.html">Home Option 4</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="nav-link" href="#about">Tracking</a></li>
+                            <li><a class="nav-link" href="#feature">API</a></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="extra-menu d-flex align-items-center">
+                        <div class="d-none d-md-block h-btn m-35px-l">
+                            <a style="background-color: #00b75a" class="m-btn m-btn-theme2nd m-btn-radius" href="login-overlay.html">Login</a>
+                        </div>
+                        <div class="d-none d-md-block h-btn m-20px-l">
+                            <a class="m-btn m-btn-theme2nd m-btn-radius" href="#">Get Demo</a>
+                        </div>
+                        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbar-collapse-toggle" aria-expanded="false">
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+    <!-- Main -->
+
+    <main>
+        <!-- Home Banner -->
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+          <defs>
+              <symbol id="arrow" viewBox="0 0 100 100">
+                <path d="M12.5 45.83h64.58v8.33H12.5z"/>
+                    <path d="M59.17 77.92l-5.84-5.84L75.43 50l-22.1-22.08 5.84-5.84L87.07 50z"/>
+              </symbol>
+          </defs>
+        </svg>
+
+        <section id="home" class="effect-section ">
+            <div  class="container container-large s-1">
+                <object class="background" id="world-bg" width="100%"  data="static/img/Group360.svg">
+                    <img src="static/img/Group360.svg" class="light-logo" alt="Mombo" title="">
+                </object>
+                <div class="row full-screen align-items-center p-100px-tb" style="padding-top: 60px;">
+                    <div style="" class="col-12 col-lg-6 col-xl-5 p-50px-tb">
+                        <h1 class=" h1 m-15px-b">Same-Day Delivery that <span style="font-weight: 800; color:#4430E3">Delights</span></h1>
+                        <p class="font-2  m-20px-b" style="font-size: 20px;">Swyft enables a carrier-grade same day logistics solution for retailers & brands</p>
+                     
+                        <form style="border: 1px solid gainsboro;" class="rd-mailform d-flex flex-row m-5px-b p-1 white-bg input-group" data-form-output="form-output-global" data-form-type="contact" method="post" action="static/plugin/mail/bat/rd-mailform.php">
+                                
+                                   
+                                           
+                            <input id="contact-email" type="email" name="email" placeholder="name@example.com" data-constraints="@Required" class="form-control">
+                            <a href="#" class="button hov-white-t" >
+                                <button style="    background: none;border: none;color: white;" class="" type="submit" name="send">
+                                    Get Demo
+                                </button>
+                                <span>
+                                    <svg>
+                                        <use xlink:href="#arrow" href="#arrow"></use>
+                                    </svg>
+                                </span>
+                            </a>
+                                   
+                        </form>
+                        <span class="font-small white-color-light">14-day FREE trial - no credit card needed</span>
+                    </div>
+                    <div class="col-lg-6 col-xl-7">
+                        <img style="" class="max-width-auto map" src="static/img/Group12.svg" title="" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Home Banner -->
+        <!-- Section -->
+       <!--   <section id="clients" class="section ">
+                <div class="owl-carousel2">
+                  <div class="o-2-item"> Your Content </div>
+                  <div class="o-2-item"> Your Content </div>
+                  <div class="o-2-item"> Your Content </div>
+                  <div class="o-2-item"> Your Content </div>
+                  <div class="o-2-item"> Your Content </div>
+                  <div class="o-2-item"> Your Content </div>
+                  <div class="o-2-item"> Your Content </div>
+                </div>
+        </section> -->
+        <section id="about" class="section ">
+
+             <object class="" id="bubble1" width="100%"  data="static/img/Group14.svg">
+                
+            </object>
+
+            <div class="container">
+                <div class="row md-m-25px-b m-45px-b justify-content-center text-center" fade-up-in>
+                    <div class="col-lg-8">
+                        <h3 class="h1 m-20px-b p-20px-b theme-after after-50px">Why Same Day Delivery?</h3>
+                        <p class="m-0px font-2">All else equal, shoppers will always choose the retailer/brand with the fastest shipping option</p>
+                    </div>
+                </div>
+                <div class="row" fade-up-in>
+                    <div class="col-md-6 col-lg-4 m-15px-tb">
+                        <div class="box-shadow hover-top white-bg border-radius-5 theme-hover-bg p-20px-lr p-40px-tb text-center">
+                            <div class="icon-80 gray-bg dots-icon border-radius-50 theme-color d-inline-block m-20px-b">
+                                <i class="icon-desktop"></i>
+                                <span class="dots"><i class="dot dot1"></i><i class="dot dot2"></i><i class="dot dot3"></i></span>
+                            </div>
+                            <h6>Easy Integration</h6>
+                            <p class="m-0px">Integrate Swyft into your eCommerce site in as little as 10 mins using our Shopify app or powerful API</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 m-15px-tb">
+                        <div class="box-shadow hover-top white-bg border-radius-5 theme-hover-bg p-20px-lr p-40px-tb text-center">
+                            <div class="icon-80 gray-bg dots-icon border-radius-50 theme-color d-inline-block m-20px-b">
+                                <span style="line-height: 88px;">                                                                        
+                                    <object   width="50px"  data="static/img/graph-icon.svg">
+                                    </object>
+                                </span>
+                                <span class="dots"><i class="dot dot1"></i><i class="dot dot2"></i><i class="dot dot3"></i></span>
+                            </div>
+                            <h6>Lower Delivery Costs</h6>
+                            <p class="m-0px">Same day delivery with Swyft is up to 60% cheaper than traditional carriers <br><br></p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 m-15px-tb">
+                        <div class="box-shadow hover-top white-bg border-radius-5 theme-hover-bg p-20px-lr p-40px-tb text-center">
+                            <div class="icon-80 gray-bg dots-icon border-radius-50 theme-color d-inline-block m-20px-b">
+                                <span style="line-height: 100px;">                                                                        
+                                    <object   width="50px"  data="static/img/money-icon.svg">
+                                    </object>
+                                </span>
+                                <span class="dots"><i class="dot dot1"></i><i class="dot dot2"></i><i class="dot dot3"></i></span>
+                            </div>
+
+                            <h6>Grow Sales</h6>
+                            <p class="m-0px">Clients who ship with Swyft have increased average order values by 18%, faster shipping = fewer cart abandonments</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>  
+
+        </section>
+        <!-- End Section -->
+        <!-- Section -->
+        <section id="feature" class="section effect-section">
+            <div class="effect effect-middle gray-bg"></div>
+            <div class="container">
+                <div class="row md-m-25px-b m-45px-b justify-content-center text-center">
+                    <div class="col-lg-7" fade-up-in>
+                        <h3 class="h1 m-20px-b p-20px-b theme-after after-50px">Last Mile Logistics Super Simplified</h3>
+                        <p class="m-0px font-2"> Lorem Ipsum Doral Hirsur me parsiso joc korem ipusm dorlarhides isto ave amieri born</p>
+                    </div>
+                </div>
+                <div class="tab-style-1" fade-up-in>
+                    <ul class="nav nav-fill nav-tabs">
+                        <li class="nav-item">
+                            <a href="#tab3_sec1" data-toggle="tab" class="active">
+                                <div class="icon"><i class="icon-chat"></i></div>
+                                <span>Experience</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#tab3_sec2" data-toggle="tab">
+                                <div class="icon"><i class="icon-tools"></i></div>
+                                <span>One Print Solution</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#tab3_sec3" data-toggle="tab">
+                                <div class="icon"><i class="icon-megaphone"></i></div>
+                                <span>Section 3</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#tab3_sec4" data-toggle="tab">
+                                <div class="icon"><i class="icon-heart"></i></div>
+                                <span>Section 4</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <!-- start tab content -->
+                        <div id="tab3_sec1" class="tab-pane fade in active show">
+                            <div class="row align-items-center p-25px-t md-p-15px-t">
+                                <div class="col-lg-6 text-center">
+                                    <img style="width: 330px;" src="static/img/500x500.jpg" title="" alt="">
+                                </div>
+                                <div class="col-lg-6 mb-h-p">
+                                    <div class="p-70px-l lg-p-0px-l lg-m-30px-t">
+                                        <h2 class="h1 m-25px-b">
+                                            Improve post-checkout Experience
+                                        </h2>
+                                        <p class="m-5px-b">Swyft improves your shoppers post-checkout experiences with real-time tracking, scheduled delivery and predictive ETAs - enabling a truly transparent delivery
+                                        </p>
+                                        <div class="row">
+                                            <div class="col-md-6 m-15px-tb">
+                                                <h5 class="theme-color h6 m-10px-b">More Info</h5>
+                                                <p class="m-0px">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                                            </div>
+                                            <!-- col -->
+                                            <div class="col-md-6 m-15px-tb">
+                                                <h5 class="theme-color h6 m-10px-b">More Info</h5>
+                                                <p class="m-0px">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                                            </div>
+                                            <!-- col -->
+                                        </div>
+                                        <!-- row -->
+                                        <!-- <div class="btn-bar p-15px-t">
+                                            <a class="m-btn m-btn-radius m-btn-theme" href="#">More About</a>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end tab content -->
+                        <!-- start tab content -->
+                        <div id="tab3_sec2" class="tab-pane fade in">
+                            <div class="row align-items-center p-25px-t md-p-15px-t">
+                                <div class="col-lg-6">
+                                    <div class="p-70px-r lg-p-0px-r lg-m-30px-t">
+                                        <h2 class="h1 m-25px-b">Welcome to Mombo <u class="theme-color">Digital Marketing</u></h2>
+                                        <p class="m-5px-b">Mombo is a HTML5 template based on Sass and Bootstrap 4 with modern and creative multipurpose design you can use it as a startups. Ut enim ad minim veniam.
+                                        </p>
+                                        <div class="row">
+                                            <div class="col-md-6 m-15px-tb">
+                                                <h5 class="theme-color h6 m-10px-b">Mobile Friendly</h5>
+                                                <p class="m-0px">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                                            </div>
+                                            <!-- col -->
+                                            <div class="col-md-6 m-15px-tb">
+                                                <h5 class="theme-color h6 m-10px-b">Multiple Layouts</h5>
+                                                <p class="m-0px">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                                            </div>
+                                            <!-- col -->
+                                        </div>
+                                        <!-- row -->
+                                        <div class="btn-bar p-15px-t">
+                                            <a class="m-btn m-btn-radius m-btn-theme" href="#">More About</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 order-lg-2 order-first text-center">
+                                    <img src="static/img/500x500.jpg" title="" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end tab content -->
+                        <!-- start tab content -->
+                        <div id="tab3_sec3" class="tab-pane fade in">
+                            <div class="row align-items-center p-25px-t md-p-15px-t">
+                                <div class="col-lg-6 text-center">
+                                    <img src="static/img/500x500.jpg" title="" alt="">
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="p-70px-l lg-p-0px-l lg-m-30px-t">
+                                        <h2 class="h1 m-25px-b">Welcome to Mombo <u class="theme-color">Digital Marketing</u></h2>
+                                        <p class="m-5px-b">Mombo is a HTML5 template based on Sass and Bootstrap 4 with modern and creative multipurpose design you can use it as a startups. Ut enim ad minim veniam.
+                                        </p>
+                                        <div class="row">
+                                            <div class="col-md-6 m-15px-tb">
+                                                <h5 class="theme-color h6 m-10px-b">Mobile Friendly</h5>
+                                                <p class="m-0px">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                                            </div>
+                                            <!-- col -->
+                                            <div class="col-md-6 m-15px-tb">
+                                                <h5 class="theme-color h6 m-10px-b">Multiple Layouts</h5>
+                                                <p class="m-0px">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                                            </div>
+                                            <!-- col -->
+                                        </div>
+                                        <!-- row -->
+                                        <div class="btn-bar p-15px-t">
+                                            <a class="m-btn m-btn-radius m-btn-theme" href="#">More About</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end tab content -->
+                        <!-- start tab content -->
+                        <div id="tab3_sec4" class="tab-pane fade in">
+                            <div class="row align-items-center p-25px-t md-p-15px-t">
+                                <div class="col-lg-6">
+                                    <div class="p-70px-r lg-p-0px-r lg-m-30px-t">
+                                        <h2 class="h1 m-25px-b">Welcome to Mombo <u class="theme-color">Digital Marketing</u></h2>
+                                        <p class="m-5px-b">Mombo is a HTML5 template based on Sass and Bootstrap 4 with modern and creative multipurpose design you can use it as a startups. Ut enim ad minim veniam.
+                                        </p>
+                                        <div class="row">
+                                            <div class="col-md-6 m-15px-tb">
+                                                <h5 class="theme-color h6 m-10px-b">Mobile Friendly</h5>
+                                                <p class="m-0px">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                                            </div>
+                                            <!-- col -->
+                                            <div class="col-md-6 m-15px-tb">
+                                                <h5 class="theme-color h6 m-10px-b">Multiple Layouts</h5>
+                                                <p class="m-0px">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                                            </div>
+                                            <!-- col -->
+                                        </div>
+                                        <!-- row -->
+                                        <div class="btn-bar p-15px-t">
+                                            <a class="m-btn m-btn-radius m-btn-theme" href="#">More About</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 order-lg-2 order-first text-center">
+                                    <img src="static/img/500x500.jpg" title="" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end tab content -->
+                    </div>
+                </div>
+            </div>
+            <section style="padding:200px 0 100px; position: relative;" class="section">   
+             <object class="" id="bubble3" width="100%"  data="static/img/bubble3.svg">
+            </object>
+
+                <div class="row md-m-25px-b m-45px-b justify-content-center text-center">
+                    <div class="col-lg-8 mb-h-p" fade-up-in>
+                        <h3 class="h1 m-20px-b p-20px-b theme-after after-50px">Solutions we provide</h3>
+                        <p class="m-0px font-2">Lorem Ipsum Doral Hirsur me parsiso joc korem ipusm dorlar hides isto ave amieri born.</p>
+                    </div>
+                </div>
+                <div class="container p-50-c" style="position: relative;">                    
+                    <div id="solution1-c" fade-up-in>
+                        <div class="sq1"><img src=""></div>
+                        <div style="flex: 1;max-width: 400px;" class="p-70px-l lg-p-0px-l lg-m-30px-t">
+                            <p class="nmbr">01.</p>
+                            <h2 class="h1 m-25px-b">
+                                Solution 1 will be going here
+                            </h2>
+                            <p class="m-5px-b">Swyft improves your shoppers post-checkout experiences with real-time tracking, scheduled delivery and predictive ETAs - enabling a truly transparent delivery
+                            </p>
+                            
+                            
+                        </div>
+                    </div>
+                    <div id="solution2-plus3-c">
+                        <div class="s2-m" style="" fade-up-in>                            
+                            <div class="sq2" ><img src=""></div>
+                            <div style="max-width: 400px;    margin-top: 30px;" class="">
+                                 <p class="nmbr">02.</p>
+                                <h2 class="h1 m-25px-b">
+                                    Solution 2 will be going here
+                                </h2>
+                                <p class="m-5px-b">Swyft improves your shoppers post-checkout experiences with real-time tracking, scheduled delivery and predictive ETAs - enabling a truly transparent delivery
+                                </p>
+                                
+                                <!-- row -->
+                                <!-- <div class="btn-bar p-15px-t">
+                                    <a class="m-btn m-btn-radius m-btn-theme" href="#">More About</a>
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class="solution-staggered" fade-up-in>                            
+                             <div class="sq33"><img src=""></div>
+                            <div style="max-width: 400px;    margin-top: 30px;" class="">
+                                 <p class="nmbr">03.</p>
+                                <h2 class="h1 m-25px-b">
+                                    Solution 3 will be going here
+                                </h2>
+                                <p class="m-5px-b">Swyft improves your shoppers post-checkout experiences with real-time tracking, scheduled delivery and predictive ETAs - enabling a truly transparent delivery
+                                </p>
+                                
+                                <!-- row -->
+                                <!-- <div class="btn-bar p-15px-t">
+                                    <a class="m-btn m-btn-radius m-btn-theme" href="#">More About</a>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                     <object class="" id="bubble2" width="100%"  data="static/img/bubble2.svg">
+                        <img src="static/img/bubble2.svg" class="light-logo" alt="Mombo" title="">
+                    </object>
+                </div>
+            </section>
+        </section>
+        <!-- End Section -->
+        <!-- Section -->
+
+       <section class="section gray-bg">
+           <div class="container">
+                <h3 id="basics" class="m-20px-b mb-show" fade-up-in>Frequently Asked Questions</h3>
+                <div class="row align-items-start">
+                   <div class="col-lg-3 go-to sticky-lg-top" fade-up-in>
+                       <div class="card m-40px-b">
+                           <div class="list-group list-group-flush box-shadow">
+                               <a href="#basics" class="nav-link list-group-item list-group-item-action d-flex justify-content-between p15px-tb">
+                                   <div>
+                                       <i class="ti-help m-10px-r"></i>
+                                       <span>Basics</span>
+                                   </div>
+                                   <div>
+                                       <i class="ti-angle-right"></i>
+                                   </div>
+                               </a>
+                               <a href="#syncing" class="nav-link list-group-item list-group-item-action d-flex justify-content-between p15px-tb">
+                                   <div>
+                                       <i class="ti-help m-10px-r"></i>
+                                       <span>Option 2</span>
+                                   </div>
+                                   <div>
+                                       <i class="ti-angle-right"></i>
+                                   </div>
+                               </a>
+                               <a href="#account" class="nav-link list-group-item list-group-item-action d-flex justify-content-between p15px-tb">
+                                   <div>
+                                       <i class="ti-help m-10px-r"></i>
+                                       <span>Option 3</span>
+                                   </div>
+                                   <div>
+                                       <i class="ti-angle-right"></i>
+                                   </div>
+                               </a>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-lg-8 ml-lg-auto" fade-up-in>
+                       <h3 id="basics" class="m-20px-b mb-hide">Frequently Asked Questions</h3>
+                       <div class="accordion accordion-05 m-40px-b">
+                           <div class="acco-group white-bg">
+                               <a href="#" class="acco-heading">Can I change plans later on?</a>
+                               <div class="acco-des">Adipisicing elit lorem ipsum dolor sit amet, consectetur. Tempora, ab officiis ducimus commodi, quibusdam similique quam corporis sequi, id, voluptates suscipit quasi nisi. Qui, explicabo quod laborum alias vero aliquid.</div>
+                           </div>
+                           <div class="acco-group white-bg">
+                               <a href="#" class="acco-heading">What is the difference between Pro and Ultimate?</a>
+                               <div class="acco-des">Quibusdam similique quam corporis sequi adipisicing elit lorem ipsum dolor sit amet, consectetur. Tempora, ab officiis ducimus commodi, id, voluptates suscipit quasi nisi. Qui, explicabo quod laborum alias vero aliquid.</div>
+                           </div>
+                           <div class="acco-group white-bg">
+                               <a href="#" class="acco-heading">Can I try before I buy?</a>
+                               <div class="acco-des">Tempora, ab officiis ducimus commodi quibusdam similique quam corporis sequi adipisicing elit lorem ipsum dolor sit amet, consectetur. id, voluptates suscipit quasi nisi. Qui, explicabo quod laborum alias vero aliquid.</div>
+                           </div>
+                           <div class="acco-group white-bg">
+                               <a href="#" class="acco-heading">Do you offer bulk discounts?</a>
+                               <div class="acco-des">Tempora, ab officiis ducimus commodi quibusdam similique quam corporis sequi adipisicing elit lorem ipsum dolor sit amet, consectetur. id, voluptates suscipit quasi nisi. Qui, explicabo quod laborum alias vero aliquid.</div>
+                           </div>
+                           <div class="acco-group white-bg">
+                               <a href="#" class="acco-heading">Is this a subscription service?</a>
+                               <div class="acco-des">Tempora, ab officiis ducimus commodi quibusdam similique quam corporis sequi adipisicing elit lorem ipsum dolor sit amet, consectetur. id, voluptates suscipit quasi nisi. Qui, explicabo quod laborum alias vero aliquid.</div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </section>
+       <section  class="section" style="    background-color: #313343; position: relative;">
+        <object class="" id="bubble5" width="100%"  data="static/img/bubble5.svg">
+        
+        </object>
+            <div class="container">   
+                <h3 style="    text-align: center;color: white;" class="h1 m-20px-b p-20px-b theme-after after-50px" fade-up-in>#Awesome People</h3>
+               
+                <div class="owl-carousel owl-theme">
+                    <div class="item" style="width: 570px; background: #7CCDB9;" fade-up-in>
+                        <div style="display: flex;align-items: flex-start;justify-content: space-between;">
+                            <div style="display: flex;align-items: center;    flex: 1;">
+                                 <object style="width: 153px;z-index: 2;padding: 15px;" width="100%"  data="static/img/scb.svg"></object>
+                                <div style="width: 75px;top: -10px;left: -10px;height: 75px;position: absolute;background-color: #00b588;">&nbsp</div>
+                                <div style="width: 24%;height: 1px;margin-left: -30px;background-color: black;">&nbsp</div>
+                            </div>                              
+                            <p style="padding: 65px 51px 0 0;font-size: 125px;height: 75px;display: flex;line-height: 1;margin: 0;font-family: cursive;align-items: center;color: white;justify-content: center;">"</p>
+                        </div>
+                        <div>                            
+                            <p class="car-p-1" style="">Shipping with Swyft has allowed us to capture sales from customers who would have otherwise shopped on Amazon</p>
+                        </div>
+                        <div style="    margin-top: 40px;position: relative;">                            
+                            <p class="car-p-2" style="">Jeremy - Founder, DianaDecor</p>
+                             <div style="width: 17%;height: 1px;position: absolute;top: 50%;background-color: black;">&nbsp</div>
+                        </div>
+                    </div>
+                    <div class="item staggered" fade-up-in style="width: 300px;background-color: white;box-shadow: 0px 2px 5px 1px #0000006b; position: relative;">
+                        <object class="" id="bubble6" width="100%"  data="static/img/Group14.svg">
+                
+                        </object>
+                        <div style="display: flex;align-items: flex-start;justify-content: space-between;">
+                            <div style="display: flex;align-items: center;    flex: 1;">
+                                 <object style="width: 153px;z-index: 2;padding: 15px;" width="100%"  data="static/img/frw.svg"></object>
+                                  <div style="width: 75px;top: -10px;left: -10px;height: 75px;position: absolute;background-color: #f1f1f1;">&nbsp</div>
+                                <div style="width: 24%;height: 1px;margin-left: -30px;background-color: black;">&nbsp</div>
+                            </div>                              
+                            <p style="padding: 54px 51px 0 0;font-size: 102px;height: 75px;display: flex;line-height: 1;margin: 0;font-family: cursive;align-items: center;color: #d4d4d4;justify-content: center;">"</p>
+                        </div>
+                        <div style="    margin-top: 15px;">                            
+                            <p style="font-weight: 600;color: black;font-size: 18px;width: 64%;margin: auto;">Shipping with Swyft has allowed us to capture sales from customers who would have otherwise shopped on Amazon</p>
+                        </div>
+                        <div style="    margin-top: 20px;position: relative;">                            
+                            <p style="    font-weight: 500;color: black;font-size: 14px;width: 64%;margin: auto;">Jeremy - Founder, DianaDecor</p>
+                             <div style="width: 17%;height: 1px;position: absolute;top: 50%;background-color: black;">&nbsp</div>
+                        </div>
+                    </div>
+                    <div class="item staggered" fade-up-in style="width: 300px;background-color: white;box-shadow: 0px 2px 5px 1px #0000006b;">
+                        <div style="display: flex;align-items: flex-start;justify-content: space-between;">
+                            <div style="display: flex;align-items: center;    flex: 1;">
+                                <object style="width: 200px;z-index: 2;padding: 15px;background-color: white;" width="100%"  data="static/img/pc.svg"></object>
+                                  <div style="width: 75px;top: -10px;left: -10px;height: 75px;position: absolute;background-color: #f1f1f1;">&nbsp</div>
+                                <div style="width: 24%;height: 1px;margin-left: -30px;background-color: black;">&nbsp</div>
+                            </div>                              
+                            <p style="padding: 54px 51px 0 0;font-size: 102px;height: 75px;display: flex;line-height: 1;margin: 0;font-family: cursive;align-items: center;color: #d4d4d4;justify-content: center;">"</p>
+                        </div>
+                        <div style="    margin-top: 15px;">                            
+                            <p style="font-weight: 600;color: black;font-size: 18px;width: 64%;margin: auto;">Shipping with Swyft has allowed us to capture sales from customers who would have otherwise shopped on Amazon</p>
+                        </div>
+                        <div style="    margin-top: 20px;position: relative;">                            
+                            <p style="    font-weight: 500;color: black;font-size: 14px;width: 64%;margin: auto;">Jeremy - Founder, DianaDecor</p>
+                             <div style="width: 17%;height: 1px;position: absolute;top: 50%;background-color: black;">&nbsp</div>
+                        </div>
+                    </div>
+                  
+                </div>
+            </div>
+       </section>
+
+       
+        <section id="contact" class="section gray-bg">
+            <div class="container">
+                <div class="row md-m-25px-b m-45px-b justify-content-center text-center">
+                    <div class="col-lg-8" fade-up-in>
+                        <h3 class="h1 m-20px-b p-20px-b theme-after after-50px" >let's start working together</h3>
+                        <p class="m-0px font-2">Mombo is a HTML5 template based on Sass and Bootstrap 4 with modern and creative multipurpose design you can use it as a startups.</p>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-7 col-lg-7 m-15px-tb" fade-up-in>
+                        <div class="white-bg box-shadow p-30px">
+                            <div class="p-20px-b">
+                                <h5 class="m-0px">Contact Us</h5>
+                            </div>
+                            <form class="rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="static/plugin/mail/bat/rd-mailform.php">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label">Name</label>
+                                            <input id="contact-name" type="text" name="name" placeholder="Rachel Roth" data-constraints="@Required" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label">Email address</label>
+                                            <input id="contact-email" type="email" name="email" placeholder="name@example.com" data-constraints="@Required" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="form-control-label">Comment</label>
+                                            <textarea class="form-control" id="contact-message" name="message" rows="3" placeholder="Hi there, I would like to ..." data-constraints="@Required"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 p-10px-t">
+                                        <button class="m-btn m-btn-theme m-btn-radius" type="submit" name="send">Contact Us</button>
+                                        <div class="snackbars" id="form-output-global"></div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4 col-xl-3 m-15px-tb" fade-up-in>
+                        <div class="border-all-10 border-color-white p-40px-tb p-20px-lr theme-bg box-shadow h-100">
+                            <h5 class="font-1 white-color m-10px-b">Our Address Info</h5>
+                            <p class="white-color-light m-30px-b">301 The Greenhouse London, E2 8DY UK</p>
+                            <h5 class="font-1 white-color m-10px-b">Our Contact Info</h5>
+                            <p class="m-5px-b"><a class="white-color-light" href="mailto:support@domain.com">support@domain.com</a></p>
+                            <p class="m-0px"><a class="white-color-light" href="tel:820-885-3321">820-885-3321</a></p>
+                            
+                            <h5 class="font-1 white-color m-10px-b m-30px-t">Follow Us</h5>
+                            <div class="social-icon si-30 white radius nav">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Section -->
+    </main>
+    <!-- End Main -->
+    <!-- Footer-->
+    <footer class="dark-bg footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-12 m-15px-tb mr-auto">
+                        <div class="m-20px-b">
+                            <object width="150"  data="static/img/logo-light.svg">
+
+                            <img src="static/img/logo-light.svg" class="light-logo" alt="Mombo" title="">
+                            </object>
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 m-15px-tb">
+                        <h6 class="white-color">
+                            Solutions
+                        </h6>
+                        <ul class="list-unstyled links-white footer-link-1">
+                            <li>
+                                <a href="#">Solution 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Solution 2</a>
+                            </li>
+                            <li>
+                                <a href="#">Solution 3</a>
+                            </li>
+                            <li>
+                                <a href="#">Solution 4</a>
+                            </li>
+                            <li>
+                                <a href="#">Solution 5</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 m-15px-tb">
+                        <h6 class="white-color">
+                            Useful Links
+                        </h6>
+                        <ul class="list-unstyled links-white footer-link-1">
+                            <li>
+                                <a href="#">Login</a>
+                            </li>
+                            <li>
+                                <a href="#">Get Demo</a>
+                            </li>
+                            <li>
+                                <a href="#">Tracking</a>
+                            </li>
+                            <li>
+                                <a href="#">API</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 m-15px-tb">
+                        <h6 class="white-color">
+                            Information
+                        </h6>
+                        <address>
+                            <p class="white-color-light m-5px-b">location at location,<br /> postal Code</p>
+                            <p class="m-5px-b"><a class="theme2nd-color border-bottom-1 border-color-theme2nd" href="mailto:support@domain.com">support@domain.com</a></p>
+                            <p class="m-5px-b"><a class="theme2nd-color border-bottom-1 border-color-theme2nd" href="tel:820-885-3321">820-885-3321</a></p>
+                        </address>
+                        <div class="social-icon si-30 theme2nd nav">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom footer-border-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-right">
+                        <ul class="nav justify-content-center justify-content-md-start m-5px-tb links-white font-small footer-link-1">
+                            <li><a href="#">Privace &amp; Policy</a></li>
+                            <li><a href="#">Faq's</a></li>
+                            <li><a href="#">Get a Quote</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 text-center text-md-right">
+                        <p class="m-0px font-small white-color-light">© 2019 copyright all right reserved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+    <!-- jquery -->
+    <script src="static/js/jquery-3.2.1.min.js"></script>
+    <script src="static/js/jquery-migrate-3.0.0.min.js"></script>
+    <!-- end jquery -->
+    <!-- appear -->
+    <script src="static/plugin/appear/jquery.appear.js"></script>
+    <!-- end appear -->
+    <!--bootstrap-->
+    <script src="static/plugin/bootstrap/js/popper.min.js"></script>
+    <script src="static/plugin/bootstrap/js/bootstrap.js"></script>
+    <!--end bootstrap-->
+    <!-- End -->
+    <!-- working form -->
+    <script type="text/javascript" src="static/plugin/owl-carousel/js/owl.carousel.min.js"></script>
+    <script src="static/plugin/mail/js/form.min.js"></script>
+    <script src="static/plugin/mail/js/script.js"></script>
+    <!-- custom js -->
+    <script src="static/js/custom.js"></script>
+    <!-- end -->
+</body>
+<!-- end body -->
+
+</html>
